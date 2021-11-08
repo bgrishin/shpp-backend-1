@@ -1,7 +1,7 @@
 const CSVParser = function(csvcities) {
     csvcities = csvcities
       .match(/(.+(?=\#))|(^(?!\#).+)/mg)
-      .map(str => {return str.split(",")})
+      .map(str => str.split(","))
       .map(res => {
           info = {}
           info.x = res[0] || ''
